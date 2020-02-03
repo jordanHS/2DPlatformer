@@ -12,7 +12,7 @@ public class EnemyMove : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(XMoveDirection, 0));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
-        if (hit.distance < .5f)
+        if (hit.distance < .3f)
         {
             Flip();
         }

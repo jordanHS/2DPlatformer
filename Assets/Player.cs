@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        health = 1;
+        health = 0.2f;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name.Equals("Enemy"))
-            health -= 0.1f;
+            health -= 0.03f;
     }
 }
 
