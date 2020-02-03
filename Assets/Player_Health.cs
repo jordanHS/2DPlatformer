@@ -4,20 +4,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Player_Health : MonoBehaviour
 {
-    public int health;
+    public static float health;
    
 
     void Update()
     {
         if (gameObject.transform.position.y < -10)
         {
-            Die();
+            health = 1;
+            if (health <= 0)
+                Destroy(gameObject);
         }
        
     }
-    void Die ()
+   
+    void OnTriggerEnter2D(Collider2D col)
     {
-        SceneManager.LoadScene("Prototype_1");
-            
+        if (col.gameObject.name.Equals("Enemy"))
+            health -= 0.1f;
     }
 }
