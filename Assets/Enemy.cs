@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
    
    
     private Animator anim;
+    public GameObject bloodEffect;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
 
         {
+            Instantiate(bloodEffect,transform.position, Quaternion.identity);
             Debug.Log("hp loss!");
             Destroy(gameObject);
         }
