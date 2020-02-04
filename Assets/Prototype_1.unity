@@ -1146,6 +1146,7 @@ GameObject:
   - component: {fileID: 1635624218}
   - component: {fileID: 1635624217}
   - component: {fileID: 1635624221}
+  - component: {fileID: 1635624216}
   m_Layer: 2
   m_Name: EnemyBat
   m_TagString: Untagged
@@ -1153,6 +1154,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &1635624216
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635624215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 240b3b1ca52ba46ed8209dbf6bac5b23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &1635624217
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1261,7 +1281,7 @@ Transform:
   m_GameObject: {fileID: 1635624215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.026686281, y: -0.507, z: -39.963184}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -1278,7 +1298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0fa356c618b41c5839fbfe116fafa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1743249722}
+  moveSpeed: 20
 --- !u!1 &1682243254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,6 +1778,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997595617533577446, guid: a053f67fb184b4a7d99fc10f85a63bc0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997595617533577446, guid: a053f67fb184b4a7d99fc10f85a63bc0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997595617533577446, guid: a053f67fb184b4a7d99fc10f85a63bc0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7277645064453486979, guid: a053f67fb184b4a7d99fc10f85a63bc0,
         type: 3}

@@ -78,8 +78,10 @@ public class Player : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name.Equals("Enemy"))
+        if (col.gameObject.name.Equals("Enemy") || col.gameObject.name.Equals("EnemyBat"))
+        {
             health -= 0.03f;
+        }
     }
 }
 
