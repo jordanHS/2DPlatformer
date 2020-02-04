@@ -25,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
 
                 for (int i = 0; i < enimiesToDamage.Length; i++)
                 {
-                    enimiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                    enimiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);   
                 }
             }
         }

@@ -135,7 +135,8 @@ GameObject:
   - component: {fileID: 11132877}
   - component: {fileID: 11132876}
   - component: {fileID: 11132881}
-  m_Layer: 2
+  - component: {fileID: 11132882}
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,6 +294,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.2653017}
   m_EdgeRadius: 0
+--- !u!114 &11132882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11132875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2127ed17480c4401a7845a014f07643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!1 &202066964
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +414,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &247709199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247709200}
+  m_Layer: 0
+  m_Name: AttackPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &247709200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247709199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1743249722}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &456616580
 GameObject:
@@ -1147,7 +1191,8 @@ GameObject:
   - component: {fileID: 1635624217}
   - component: {fileID: 1635624221}
   - component: {fileID: 1635624216}
-  m_Layer: 2
+  - component: {fileID: 1635624222}
+  m_Layer: 8
   m_Name: EnemyBat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1300,6 +1345,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1743249722}
   moveSpeed: 20
+--- !u!114 &1635624222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635624215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2127ed17480c4401a7845a014f07643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 6
 --- !u!1 &1682243254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1480,7 @@ GameObject:
   - component: {fileID: 1743249724}
   - component: {fileID: 1743249725}
   - component: {fileID: 1743249723}
+  - component: {fileID: 1743249726}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1538,6 +1597,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1682243255}
+  - {fileID: 247709200}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1594,6 +1654,25 @@ MonoBehaviour:
   playerSpeed: 10
   playerJumpPower: 1250
   isGrounded: 1
+--- !u!114 &1743249726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743249718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0cf017e734f4c32a17ebaffd9e2d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwAttack: 0.3
+  attackPos: {fileID: 247709200}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 256
+  attackRange: 0.58
+  damage: 3
 --- !u!1 &1908172421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,7 +1881,7 @@ PrefabInstance:
     - target: {fileID: 7277645064453486979, guid: a053f67fb184b4a7d99fc10f85a63bc0,
         type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a053f67fb184b4a7d99fc10f85a63bc0, type: 3}
