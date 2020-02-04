@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        anim.SetBool("isRunning", true);
+        
     }
 
     void Update()

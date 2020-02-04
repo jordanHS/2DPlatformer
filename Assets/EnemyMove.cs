@@ -15,6 +15,7 @@ public class EnemyMove : MonoBehaviour
         if (hit.distance < .3f)
         {
             Flip();
+            
         }
     }
     void Flip()
@@ -22,10 +23,12 @@ public class EnemyMove : MonoBehaviour
         if(XMoveDirection > 0)
         {
             XMoveDirection = -1;
+            Debug.Log("Flip1");
         }
         else
         {
             XMoveDirection = 1;
+            Debug.Log("Flip2");
         }
     }
 }
