@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
     }
     void Jump()
     {
-        GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpPower);
+        GetComponent<Rigidbody2D>().AddForce (Vector2.up * playerJumpPower);
         isGrounded = false;
     }
     void FlipPlayer()
@@ -56,7 +56,12 @@ public class Player : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-
+        Debug.Log("Player has collided with " + col.collider.name);
+        if (col.gameObject.tag == "Terrain")
+        {
+            Debug.Log("Player has collided with " + col.collider.name);
+            isGrounded = true;
+        }
     }
     void PlayerRaycast()
     {
@@ -68,7 +73,7 @@ public class Player : MonoBehaviour
         }
         if (hit != null && hit.collider != null && hit.distance < .9f && hit.collider.tag != "enemy")
         {
-            isGrounded = true;
+            
         }
     }
     void OnTriggerEnter2D(Collider2D col)

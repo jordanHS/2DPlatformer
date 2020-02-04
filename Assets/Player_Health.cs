@@ -15,9 +15,18 @@ public class Player_Health : MonoBehaviour
             if (health <= 0)
                 Destroy(gameObject);
         }
-       
+        if (gameObject.transform.position.y < -10)
+        {
+            Die();
+        }
+
     }
-   
+    void Die()
+    {
+        SceneManager.LoadScene("Prototype_1");
+
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name.Equals("Enemy"))
