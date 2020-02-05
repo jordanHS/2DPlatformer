@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public bool isGrounded;
     Rigidbody2D rb;
     public static float health;
+    public Animator animator;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     {
         PlayerMove();
         PlayerRaycast();
+        animator.SetFloat("Speed", Mathf.Abs(moveX));
         if (health <= 0)
             Destroy(gameObject);
     }
