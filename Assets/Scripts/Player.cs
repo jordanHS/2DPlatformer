@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -25,7 +26,11 @@ public class Player : MonoBehaviour
         PlayerRaycast();
         animator.SetFloat("Speed", Mathf.Abs(moveX));
         if (health <= 0)
+        {
             Destroy(gameObject);
+            SceneManager.LoadScene("Prototype_1");
+        }
+
     }
     void PlayerMove()
     {

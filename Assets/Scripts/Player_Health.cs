@@ -13,7 +13,12 @@ public class Player_Health : MonoBehaviour
         {
             health = 0.2f;
             if (health <= 0)
+            {
+
                 Destroy(gameObject);
+                SceneManager.LoadScene("Prototype_1");
+            }
+                
         }
         if (gameObject.transform.position.y < -10)
         {
