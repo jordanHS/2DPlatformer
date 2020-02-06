@@ -16240,6 +16240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0cf017e734f4c32a17ebaffd9e2d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  combat: 0
+  animator: {fileID: 1743249727}
   startTimeBtwAttack: 0.3
   attackPos: {fileID: 247709200}
   whatIsEnemies:
