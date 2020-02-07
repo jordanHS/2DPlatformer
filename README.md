@@ -2,7 +2,7 @@
 
 #### _Traditional 2D platform game, 2.6.2020_
 
-#### By _**Anthony Golovin, Jamila Aliyeva, Will Quanstrom**_
+#### By _**Anthony Golovin, Jamila Aliyeva, Will Quanstrom & Jordan Safford**_
 
 ## Description
 
@@ -29,7 +29,7 @@ _No known major bugs at this time. Enemies' attacks do not refresh after a certa
 
 ## Support and contact details
 
-_wquanstr215@gmail.com, agolovin97@live.com, aliyeva852@gmail.com_
+_wquanstr215@gmail.com, agolovin97@live.com, aliyeva852@gmail.com, jordansafford@gmail.com_
 
 ## Technologies Used
 
